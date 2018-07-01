@@ -12,6 +12,9 @@
                 <a href = "#required">Что потребуется</a>
                 <a href = "#advice">Перед началом</a>
                 <a href = "#install">Установка</a>
+                <a href="#send">Передача файлов</a>
+                <br />
+                <a href=#games>Установка игр</a>
                 <a href = "#other">Полезный софт</a>
             </nav>
         </header>
@@ -87,7 +90,37 @@
                 <li>Вновь подключаем виту к ПК, запускаем "Управление данными" на нашей вите, выбираем <em>Скопировать данные</em>, после <em>Компьютер -> Система PS Vita - Приложения - PS Vita</em>, ставим галочку на <em>h-encore</em> и нажимаем <em>Копировать</em></li>
                 <img src="images/14.jpg" width="600">
                 <li>Закрываем "Управление данными", ищем пузырь <em>h-encore</em> и запускаем, на вопрос про трофеи отвечаем "Да". Экран пару раз моргнет и откроется <em>h-encore bootstrap menu</em>. В нем мы нажимаем <strong>Install HENkaku</strong>, а затем <strong>Download VitaShell</strong>. После нажимаем <strong>Exit</strong></li>
+                <li>После каждой перезагрузки нужно снова заходить в <em>h-encore bootstrap menu</em> и нажимать на <strong>Install HENkaku</strong></li>
+                <li>P.S. - зайдите в <em>Настройки - Настройки HENkaku</em> и поставьте галочку на <strong>Включить небезопасные приложения</strong>, иначе тот же VitaShell будет работать в безопасном режиме</li>
                 <li>PROFIT</li>
+            </div>
+            <hr />
+            <div id = "send">
+                <h2>Передача файлов через VitaShell</h2>
+                <li>Скачиваем <a href = "https://filezilla-project.org/download.php?type=client">FileZilla</a> и устанавливаем  (будьте внимательнее, эти ребята любят всякие мелкие галочки в установщиках делать, но альтернатив толком нет)</li>
+                <li>Запускаем VitaShell, нажимаем кнопку <em>START</em>, пролистываем стрелочками до <em>SELECT button</em> и стрелочками вправо-влево выбираем <em>FTP</em>, нажимаем на круг, чтобы закрыть это меню</li>
+                <li>Теперь запускаем FileZilla на ПК, после чего на вите нажимаем <em>SELECT</em>. Появится строчка, начинающаяся с <em>ftp://</em>. В FileZilla сверху в поле <em>Хост</em> вводите первые четыре цифры через точки. После двоеточия идет порт. Введите его так же в поле <em>Порт</em> на ПК</li>
+                <img src="images/14.png">
+                <li>Нажимаем <em>Быстрое соединение</em>. Всё, вы подключились к своей вите. На крестик можете свернуть окошко с ip-адресом и портом</li>
+                <li>Чтобы передать файл, просто перетащите его в правую часть экрана</li>
+                <img src="images/15.png" width="1000">
+            </div>
+            <hr />
+            <div id = "games">
+                <h2>Установка игр</h2>
+                <li>Скачиваем <a href ="https://nopaystation.com/vita/npsReleases/">NPS Browser</a>, устанавливать не нужно, сразу запускайте</li>
+                <li>При первом запуске нужно заполнить адреса таблиц и еще пару пунктов. <br /> В <em>Games/PSV tsv:</em> <code>https://nopaystation.com/tsv/PSV_GAMES.tsv</code> <br /> В <em>Games/PSM tsv:</em> <code>https://nopaystation.com/tsv/PSM_GAMES.tsv</code> <br /> В <em>DLCs/PSV tsv:</em> <code>https://nopaystation.com/tsv/PSV_DLCS.tsv</code> <br /> В <em>Themes/PSV tsv:</em> <code>https://nopaystation.com/tsv/PSV_THEMES.tsv</code><br />В <em>Download and unpack dir</em> выбираем папку, куда будут сохраняться скачаные игры,<br />в <em>Any pkg dec tool</em> выбирайте <strong>pkg2zip.exe</strong>, который вы качали в самом начале (ссылка есть в шапке сайта)<br />Закрываем это окно</li>
+                <img src="images/16.png" width="800">
+                <li>Появляется вот такое окно, где вы можете выбрать игры, DLC или темы, их регион</li>
+                <img src="images/17.png" width="800">
+                <li>Щелкаем по любой игре и скачиваем, нажав на <em>Download and Unpack</em></li>
+                <img src="images/18.png">
+                <li>Теперь качаем плагин <a href = "https://github.com/frangarcj/NoPsmDrm/releases">NoNpDrm.skprx</a>, подключаемся к вите по FTP и закидываем этот плагин в <em>ur0:tai/</em>. Там же есть файл <strong>config.txt</strong>, копируем его на пк, открываем, после строки KERNEL добавляем <code>ur0:tai/nonpdrm.skprx</code>. Сохраняем <strong>config.txt</strong> и перебрасываем его обрано на виту, соглашаясь на замену</li>
+                <img src="images/19.png">
+                <li>Перезагружаем виту, снова активируем HENkaku через <em>H-Encore</em></li>
+                <li>После этого на ПК идем в папку, которую вы выбрали для загрузок в NPW Browser, находим там папку <em>app</em>, открываем, и видим папку с игрой. Снова подключаемся к вите по FTP (чуть выше есть инструкция) и закидываем эту папку в <em>ux0:app/</em>, после чего нажимаем на <strong>треугольник</strong> в VitaShell и выбираем <em>Refresh Live Area</em></li>
+                <li>Если после обновления появилась надпись не с нулем, то поздравляю, ваша игра установилась и появилась на LiveArea экране</li>
+                <li>DLC и патчи устанавливать точно так же, только вместо папки <em>ux0:app</em> копировать их в <em>ux0:addcont/</em> и <em>ux0:patch/</em> соответсвтенно</li>
             </div>
             <hr />
             <div id = "other">
@@ -96,10 +129,7 @@
                     <li><a href = "https://4pda.ru/forum/index.php?showtopic=465175&st=17800#entry70880869">Установка ENSO</a></li>
             </div>
             <hr />
-            <div id = "games">
-                
-            </div>
-            <hr />
+
         </main>
         <footer>
             <address>by <a href="http://4pda.ru/forum/index.php?showuser=4085728">nikolay2002</a> from 4PDA</address>
