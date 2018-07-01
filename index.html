@@ -1,51 +1,92 @@
-+<!DOCTYPE html>
-+<html>
-+    <head>
-+        <title>H-Encore PS Vita 3.68</title>
-+        <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Oswald" rel="stylesheet">
-+        <link rel="stylesheet" href = "styles.css">
-+    </head>
-+    <body>
-+       <header>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>H-Encore PS Vita 3.68</title>
+        <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Oswald" rel="stylesheet">
+        <link rel="stylesheet" href = "styles.css">
+    </head>
+    <body>
+        <header>
             <h1>H-Encore</h1>
             <nav>
                 <a href = "#required">Что потребуется</a>
-                <a href = "#advice">Советы</a>
+                <a href = "#advice">Перед началом</a>
                 <a href = "#install">Установка</a>
                 <a href = "#other">Полезный софт</a>
             </nav>
         </header>
         <main>
             <h2 class = "attention">ATTENTION</h2>
-            <p class = "attention">Я являюсь составителем этого FAQ и снимаю всякую ответственность за Ваши действия. Если вы сделаете что-то не так, или не прочитаете нужную информацию - вина только Ваша. Как и Ваше право решать, стоит ли нарушать закон и взламывать вашу консоль для получения бесплатного софта.</p>
+            <p class = "attention">Я являюсь составителем этого FAQ и снимаю с себя всякую ответственность за Ваши действия. Если Вы сделаете что-то не так, или не прочитаете нужную информацию - вина только Ваша. Как и Ваше право решать, стоит ли нарушать закон и взламывать вашу консоль для получения бесплатного софта.</p>
             <hr />
             <div id = "required">
                 <h2>Нужно скачать:</h2>
                 <br />
-                <a href = "https://github.com/TheOfficialFloW/VitaShell/releases">VitaShell</a>
+                <a href = "https://codestation.github.io/qcma/" target="_blank">QCMA</a>
                 <br />
-                <a href = "">Second link</a>
+                <a href = "https://github.com/yifanlu/psvimgtools/releases" target="_blank">psvimgtools</a>
                 <br />
-                <a href = "">Third link</a>
+                <a href = "https://github.com/mmozeiko/pkg2zip/releases" target="_blank">pkg2zip</a>
+                <br />
+                <a href = "http://ares.dl.playstation.net/cdn/JP0741/PCSG90096_00/xGMrXOkORxWRyqzLMihZPqsXAbAXLzvAdJFqtPJLAZTgOcqJobxQAhLNbgiFydVlcmVOrpZKklOYxizQCRpiLfjeROuWivGXfwgkq.pkg" target="_blank">PKG-файл</a>
+                <br />
+                <a href="https://github.com/TheOfficialFloW/h-encore/releases" target="_blank">H-Encore</a>
             </div>
             <hr />
             <div id = "advice">
-                <h2>Советы</h2>
-                <li>Первый совет, что-то типа Я СУКА ПРЕДУПРЕЖДАЛ АААА</li>
-                <li>Второй совет, <strong>ЕЩЕ РАЗ ПРЕДУПРЕЖДАЮ</strong></li>
-                <li>Зарядите виту на сотку, прочая херня</li>
-                <li>Помойте руки и стерелизуйте кота, чтобы не мешал</li>
-                <li>Для фатки нужна карта памяти, без неё никак, пишалька(</li>
+                <h2>Перед началом</h2>
+                <li>Включаем отображение расширений файлов. Включаются они на Windows 10 через Проводник. Сверху выбираtv вкладку <em>Вид</em> и ставим галочку на <em>Расширения имен файлов</em></li>
+                <img src="images/0_1.png">
+                <li>Если у вас стоит 3.65 или ниже - обновляйтесь до неё, устанавливайте HENkaku по данному гайду и ставте Enso (внизу будет ссылка)</li>
+                <li>Для удачного взлома нужен активный аккаунт</li>
+                <li>Желательно иметь консоль, заряженную хотя бы наполовину, чтобы избежать сюрпризов</li>
+                <li>Для фат-версии нужна карта памяти, без неё никак</li>
+                <li>Так же я бы советовал работать в одном месте, не раскидывая файлы по всему ПК. После загрузки сложите всё необходимое в одну папку, лучше всего, чтобы она была в корне диска</li>
+                <li><strong>Не торопитесь</strong>, вникайте в каждое слово и у вас всё получится</li>
             </div>
             <hr />
             <div id = "install">
                 <h2>Установка</h2>
-                <li>Делаем что-то</li>
-                <li>Еще что-то делаем, делаем, деееелаем, и так даааалееееее</li>
-                <li>Снова делаем, старательно и неумолимо</li>
-                <li>?????</li>
-                <li>?????</li>
-                <li>?????</li>
+                <li>Скачиваем всё то, что указано выше.</li>
+                <li>Открываем архив H-Encore, внутри у нас будет папка с аналогичным названием - распаковываем её. Сам архив можно удалить.</li>
+                <img src="images/1.png">
+                <li>Распаковываем архив pkg2zip_64bit.zip, внутри будет <em>.exe</em> файл, он нам и нужен. Сам архив снова можно удалить, дабы не мешался.</li>
+                <img src="images/2.png">
+                <li>Зажимаем Shift и щелкаем ПКМ, появится меню. Нам нужно выбрать "Открыть окно PowerShell здесь"</li>
+                <img src="images/3.png">
+                <li>В PowerShell пишем <code>.\pkg2zip -x PATHTOPKG</code> (PATHTOPKG - полный путь до файла PKG, советую просто написать <code>./pkg2zip -x</code> и перетащить PKG файл в окно PowerShell). Нажимаем Enter. После завершения PKG файл можно удалить.</li>
+                <img src="images/4.png">
+                <li>Получаем папку <em>app</em>, в которой будет еще одна - <em>PCSG90096</em></li>
+                <img src="images/5.png">
+                <li>Открываем папку <em>app/PCSG90096</em> и копируем всё из неё в папку <em>h-encore/app/ux0_temp_game_PCSG90096_app_PCSG90096</em>. Нужно, чтобы файл <em>eboot.bin</em> был там же, где <em>VITA_PATH.txt</em></li>
+                <img src="images/6.png">
+                <li>Копируем файл <em>app/PCSG90096/sce_sys/package/temp.bin</em> в <br /> <em>h-encore/license/ux0_temp_game_PCSG90096_license_app_PCSG90096</em> и переименовываем из <em>temp.bin</em> в <em>6488b73b912a753a492e2714e9b38bc7.rif</em>. Соглашаемся на изменение формата файла</li>
+                <img src="images/7.png">
+                <li>Устанавливаем QCMA. При установке галочки не трогаем, лишь в конце ставим на <em>Run QCMA</em>. Теперь в нав-баре Windows находим значок QCMA и нажимаем на нем ПКМ, после выбираем <em>Settings</em></li>
+                <img src="images/8.png">
+                <li>Выбираем путь к бекапам, запоминаем его. Нажимаем <em>OK</em></li>
+                <img src="images/9.png">
+                <li>Подключаем виту к ПК. Запускаем "Управление данными" на нашей вите, выбираем <em>Скопировать данные</em>, после <em>Компьютер -> Система PS Vita - Приложения - PS Vita</em>. Пока можно отключить виту. В папке для бекапов, которую мы выбрали, появились новые папки. Нам нужна <em>APP</em>. Открываем её, в ней будет всего одна папка, её название - <strong>наш ID</strong>. Копируем название</li>
+                <img src="images/10.png">
+                <li>Переходим на <a href = "http://cma.henkaku.xyz/" target="_blank">этот</a> сайт, и в поле вводим скопированное название папки, нажимаем отправить. Снизу появится строка, копируем символы после <strong>жирного</strong> шрифта. Это наш ключ</li>
+                <li>Теперь распаковываем <em>psvimgtools-0.1-win64.zip</em> в папку <em>h-encore</em></li>
+                <img src="images/11.png">
+                <li>Зажимаем <em>Shift</em> и щелкаем ПКМ, как в прошлый раз открываем PowerShell и прописываем четыре команды (после каждой нажимаем <em>Enter</em>), где вместо <em>КЛЮЧ</em> вставляем скопированный с сайта ключ:
+                    <br />
+                    <code>
+                        .\psvimg-create -n app -K КЛЮЧ app PCSG90096/app <br />
+                        .\psvimg-create -n appmeta -K КЛЮЧ appmeta PCSG90096/appmeta <br />
+                        .\psvimg-create -n license -K КЛЮЧ license PCSG90096/license <br />
+                        .\psvimg-create -n savedata -K КЛЮЧ savedata PCSG90096/savedata <br />
+                    </code>
+                </li>
+                <li>Теперь из папки <em>h-encore</em> копируем папку <em>PCSG90096</em> в <em>папка_для_бекапов/APP/ваш_ID/</em></li>
+                <img src="images/12.png">
+                <li>В нав-баре Windows снова находим значок QCMA, щелкаем ПКМ и нажимаем <em>Refresh Database</em></li>
+                <img src="images/13.png">
+                <li>Вновь подключаем виту к ПК, запускаем "Управление данными" на нашей вите, выбираем <em>Скопировать данные</em>, после <em>Компьютер -> Система PS Vita - Приложения - PS Vita</em>, ставим галочку на <em>h-encore</em> и нажимаем <em>Копировать</em></li>
+                <img src="images/14.jpg" width="600">
+                <li>Закрываем "Управление данными", ищем пузырь <em>h-encore</em> и запускаем, на вопрос про трофеи отвечаем "Да". Экран пару раз моргнет и откроется <em>h-encore bootstrap menu</em>. В нем мы нажимаем <strong>Install HENkaku</strong>, а затем <strong>Download VitaShell</strong>. После нажимаем <strong>Exit</strong></li>
                 <li>PROFIT</li>
             </div>
             <hr />
@@ -56,7 +97,7 @@
             <hr />
         </main>
         <footer>
-            <address>by <a href="http://4pda.ru/forum/index.php?showuser=4085728">John Snake</a></address>
+            <address>by <a href="http://4pda.ru/forum/index.php?showuser=4085728">nikolay2002</a> from 4PDA</address>
         </footer>
     </body>
 </html>
