@@ -1,0 +1,40 @@
+body{
+    font-family: "Didact Gothic";
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+p{
+    font-size: 1.5em;
+}
+li{
+    font-size: 1.3em;
+}
+main{
+    padding-top: 30px;
+}
+header h1{
+    text-align: center;
+    font-size: 5em;
+    box-shadow: 11px 10px 10px 10px rgba(0,0,0,0.5);
+    color: #3867d6;
+    border-radius: 20px;
+}
+
+nav{
+    text-align: center;
+    font-size: 2.2em;
+    font-family: 
+}
+
+h2{
+    font-size: 2.5em;
+}
+
+main a{
+    font-size: 1.5em;
+}
+.attention{
+    color:red;
+    
+}
